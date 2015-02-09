@@ -17,6 +17,7 @@ RUN chown -R www-data:www-data /app/wp-content /var/www/html
 
 # Add database setup script
 ADD create_mysql_admin_user.sh /create_mysql_admin_user.sh
+ADD mysql.dump.sql /mysql.dump.sql
 ADD create_db.sh /create_db.sh
 RUN chmod +x /*.sh
 
